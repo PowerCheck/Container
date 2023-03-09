@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+
+  web:
+    environment:
+      - ENV=dev
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=1000
+      - TSC_WATCHFILE=UseFsEventsWithFallbackDynamicPolling 
+    volumes:
+      - ${ROOT_PATH}\volumes\web:/opt/web
+      - ${ROOT_PATH}\volumes\api:/opt/api
+      
+  db:
+    ports:
+      - 27017:27017
+

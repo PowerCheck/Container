@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /opt/api
+
+if [ "$ENV" != "dev" ]; then
+  npm start & echo $! > /tmp/api.pid
+fi

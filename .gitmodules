@@ -1,0 +1,6 @@
+[submodule "volumes/api"]
+	path = volumes/api
+	url = git@github.com:PowerCheck/api.git
+[submodule "volumes/web"]
+	path = volumes/web
+	url = git@github.com:PowerCheck/web.git

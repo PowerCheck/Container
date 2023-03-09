@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /opt/web
+
+if [ "$ENV" != "dev" ]; then
+  yarn start & echo $! > /tmp/web.pid
+fi
